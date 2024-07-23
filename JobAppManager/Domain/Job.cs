@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace JobAppManager.Domain
 {
@@ -9,6 +10,8 @@ namespace JobAppManager.Domain
                 Comments = new Collection<Comment>();
         }
         public int Id { get; set; }
+        [Required]
+        [StringLength(80)]
         public string? Title { get; set; }
         public string? Description { get; set; }
         public DateTime PublicationDate { get; set; }

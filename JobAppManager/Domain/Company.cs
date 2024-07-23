@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace JobAppManager.Domain
 {
@@ -9,6 +10,8 @@ namespace JobAppManager.Domain
             Jobs = new Collection<Job>();
         }
         public int Id { get; set; }
+        [Required]
+        [StringLength(80)]
         public string? Name { get; set; }
         public string? Address { get; set; }
         public string? City { get; set; }
