@@ -7,7 +7,7 @@ namespace JobAppManager.Domain
     {
         public Recruiter()
         {
-            Recruiters = new Collection<Recruiter>();
+            Jobs = new Collection<Job>();
         }
         public int Id { get; set; }
         [Required]
@@ -16,6 +16,6 @@ namespace JobAppManager.Domain
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public string? LinkedInProfileUrl { get; set; }
-        public ICollection<Recruiter>? Recruiters { get; set; }
+        public ICollection<Job>? Jobs { get; set; }
     }
 }
